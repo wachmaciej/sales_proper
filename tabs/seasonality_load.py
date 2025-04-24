@@ -144,7 +144,7 @@ def color_diff(cell_value):
 # --- Main Display Function ---
 def display_tab(df, available_years):
     st.markdown("### Seasonality Load Planning")
-    st.markdown("Analyze units sold and average selling price for a specific season, date range, and channel(s) across previous years, and generate a simple unit forecast.")
+    st.markdown("Analyse units sold and average selling price for a specific season, date range, and channel(s) across previous years, and generate a simple unit forecast.")
 
     # Check for required columns
     required_cols = {
@@ -182,7 +182,7 @@ def display_tab(df, available_years):
             season_options = [s for s in available_seasons if s and s.strip() and s.upper() != "ALL"]
             selected_season = None
             if not season_options: st.warning("No specific seasons found in the data.")
-            else: selected_season = st.selectbox( "Select Season", options=season_options, key="seasonality_season", index=0, help="Select the season to analyze." )
+            else: selected_season = st.selectbox( "Select Season", options=season_options, key="seasonality_season", index=0, help="Select the season to analyse." )
         with col3:
             st.markdown("###### Historical Month-Day Range"); c3a, c3b = st.columns(2); month_names = {m: datetime.date(2000, m, 1).strftime('%b') for m in range(1, 13)}
             with c3a: st.caption("Start"); start_month = st.selectbox("Month ", options=list(month_names.keys()), key="start_month", index=0, format_func=month_names.get); start_day = st.number_input("Day ", min_value=1, max_value=31, value=1, step=1, key="start_day", label_visibility="collapsed")
