@@ -17,7 +17,7 @@ from tabs import seasonality_load
 from tabs import category_summary # <<< ADD IMPORT FOR NEW TAB
 
 # --- Page Configuration ---
-st.set_page_config(page_title="YOY Dashboard", page_icon=":chart_with_upwards_trend:", layout="wide")
+st.set_page_config(page_title="YOY Dashboard", page_icon=":pound:", layout="wide")
 
 # --- Title and Logo ---
 col1_title, col2_logo = st.columns([3, 1])
